@@ -1,0 +1,65 @@
+<%- include('header') %>
+<div class="search-bar">
+<form action="/search" method="get">
+  <!-- Barre de recherche -->
+   <!-- <input class="search-input" type="search" name="query" placeholder="Search activity" /> -->
+
+  <!-- Filtre par catégorie -->
+  <select class="select-category" name="tag">
+    <option value="">Toutes les catégories</option>
+    <option value="Animals">Animals</option>
+    <option value="Game">Game</option>
+    <option value="Discovery">Discovery</option>
+    <option value="Thrill">Thrill</option>
+    <option value="Family">Family</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Sport">Sport</option>
+  </select>
+
+  <!-- Bouton de recherche -->
+  <button class="search-button" type="submit">search</button>
+</form>
+</div>
+
+<!-- Affichage des résultats -->
+
+<main id="main">
+  <% if (activities.length === 0) { %>
+    <p>Aucune activité disponible.</p>
+  <% } else { %>
+
+    <% activities.forEach(activity => { %>
+      <div class="activity-card">
+        <h1 class="activity-title"><%= activity.title %></h1>
+        <img class="activity-img" src="<%= activity.image %>" alt="<%= activity.alt %>">
+        
+        <div class="activity-under-img">
+          <div class="activity-price">
+            <% for (let i = 0; i < 3; i++) { %>
+              <span class="price-round">
+                <img class="activity-price-icon <%= i < activity.price ? 'filled' : '' %>" 
+                     src="/images/dollar.png" 
+                     alt="icone d'un dollar">
+              </span>
+            <% } %>
+          </div>
+  
+          <!-- Tags associés à l'activité -->
+          <div class="product-tag">
+            <% activity.tags.forEach(tag => { %>
+              <span class="one-product-tag <%= 'tag-' + tag.toLowerCase() %>"><%= tag %></span>
+            <% }) %>
+          </div>
+  
+        </div>
+          <h2 class="activity-city"><%= activity.city%></h2>
+          <button class="button-more">
+            <a href="/activity/<%= activity.id %>">See more</a>
+          </button>
+      </div>
+      
+    <% }) %>
+  <% } %>
+</main>
+
+<%- include('footer') %>

@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/background.jpg);
+    background-size: cover;
+    font-family: "Roboto", sans-serif;
+}
+
+/* HEADER */ 
+
+#header {
+    padding: 10px;
+    text-align: center;
+}
+
+.header-title {
+    font-family: "Mogra", system-ui;
+    color: white;
+    font-weight: 400;
+    font-size: 55px;
+    text-transform: uppercase;
+    margin: 60px 20% 15px;
+  }  
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.search-input {
+    display: flex;
+    padding: 15px 30px;
+    margin: 10px 0;
+    border-radius: 20px;
+    border: 0.1px solid #ccc;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 7px;
+    border-style: none;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.select-category {
+    padding: 7px;
+    margin-right: 7px;
+}
+
+
+/* MAIN CARD ACTIVITY PRESENTATION */ 
+
+#main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10px;
+    margin: auto;
+  
+}
+
+.activity-card {
+    display: grid;
+    background-color: white;
+    width: 350px;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+.activity-title {
+    font-family: "Shadows Into Light", cursive;
+    color: black;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+    align-self: center;
+  }
+
+.activity-img {
+    width: 300px;
+    height: 184px;
+    margin: auto;
+    object-fit: cover;
+}
+
+.activity-under-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 25px;
+    
+}
+
+.activity-price {
+    margin: 0 0.2rem 0 0;
+}
+
+.price-round {
+    width: 100%;
+}
+
+
+.activity-price-icon {
+    width: 16px;
+    height: auto;
+    background-color: lightgrey;
+    border: 0.1px solid black;
+    padding: 2px;
+    border-radius: 100%;
+    margin-right: 5px;
+    margin-top: 6px;
+}
+
+.filled {
+    background: #bedfff;
+}
+
+/* TAGS */
+.tag-animals {
+    background-color: #F8B240;
+}
+
+.tag-family {
+    background-color: #2a927e;
+}
+
+.tag-game {
+    background-color: #2a2b7c;
+}
+
+.tag-sport {
+    background-color: #9e307d;
+}
+
+.tag-adventure {
+    background-color: #35acbe;
+}
+
+.tag-discovery 
+{
+    background-color: #7265af;
+}
+
+.tag-thrill 
+{
+    background-color: #af657c;
+}
+
+
+.one-product-tag {
+    color: white;
+    border: 0.1px solid black;
+    padding: 2px 7px;
+    margin-right: 4px;
+    font-size: 11px;
+    border-radius: 100px;
+}
+
+
+.activity-city {
+    text-align: center;
+    align-self: center;
+    font-size: small;
+    font-weight: 300;
+    min-width: 100px;
+    margin: 10px auto;
+    padding: 2px;
+    border: 0.5px solid black;
+    border-radius: 2px;
+}
+
+.button-more {
+    text-align: center;
+    font-size: 12px;
+    background-color: #1980B1;
+    border-radius: 100px;
+    border: none;
+    width: 90px;
+    height: 30px;
+    color: white;
+    padding: 5px;
+    margin: 0 auto 20px;
+}
+
+.button-more a {
+text-decoration: none;
+color: white;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #19acb1;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
